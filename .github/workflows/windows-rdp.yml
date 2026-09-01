@@ -23,7 +23,7 @@ jobs:
 
       - name: 3. Download and Run AnyDesk
         run: |
-          Invoke-WebRequest "https://download.anydesk.com/AnyDesk.exe" -OutFile "C:\AnyDesk.exe"
+          Invoke-WebRequest "https://download.anydesk.com/AnyDesk.exe" -OutFile "C:\AnyDesk.exe"-OutFile "C:\AnyDesk.exe"
           Start-Process -FilePath "C:\AnyDesk.exe" -ArgumentList "--start-with-win --silent" -Wait
           Start-Sleep -Seconds 10
           $ad_id = & "C:\AnyDesk.exe" --get-id
